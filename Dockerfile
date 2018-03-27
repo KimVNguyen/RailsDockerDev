@@ -8,5 +8,6 @@ RUN gem install rails
 
 #Adds current user to container
 RUN useradd -ms /bin/bash $USR
+USER $USR:$USR
 
 CMD ["/bin/bash"]
