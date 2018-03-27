@@ -1,9 +1,11 @@
-FROM ruby:2.5
-ARG USR
+FROM ruby:latest
+ARG USR=root
 
 #Performs Basic Installs
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
-RUN gem install rails
+
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN apt-get install -y build-essential libpq-dev nodejs sqlite libsqlite3-dev
+RUN gem install --no-rdoc --no-ri rails sqlite3
 
 
 #Adds current user to container
