@@ -1,0 +1,1 @@
+docker run -it -v $(pwd):/app --name $USER $USER/rails 
