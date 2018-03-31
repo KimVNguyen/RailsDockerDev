@@ -1,1 +1,1 @@
-docker run -it -v $(pwd):/app --name $USER $USER/rails 
+docker run -it -v $(pwd):/app -p 3000:3000 --name $USER $USER/rails 

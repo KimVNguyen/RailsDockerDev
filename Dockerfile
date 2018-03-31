@@ -1,6 +1,8 @@
 FROM ubuntu:xenial
 ARG USR=root
 
+EXPOSE 3000
+
 #Performs Basic Installs
 RUN apt-get update && apt-get -y install curl software-properties-common python-software-properties
 RUN apt-add-repository ppa:brightbox/ruby-ng
