@@ -1,1 +1,0 @@
-docker build -t %USERNAME%/rails --build-arg USR=%USERNAME% .
